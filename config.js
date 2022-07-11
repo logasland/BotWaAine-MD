@@ -1,6 +1,11 @@
 let fs = require('fs') 
 let chalk = require('chalk')
 
+global.wm2 = '兰｢ȺɍđħɨXs｣兰'
+global.apikeyar = 'ardhixs.herokuapp.com'
+global.instagram = 'https://instagram.com/ardhixs_/' //ganti pakai Instagram mu
+global.fotonya1 = 'https://i.ibb.co/1RRbRYY/thumb.jpg' //ganti jadi foto bot mu
+global.fotonya2 = 'https://i.ibb.co/1RRbRYY/thumb.jpg' //ini juga ganti pakai foto bot mu
 global.owner = [
   ['6288295249563'],
   ['6288294052009'],
