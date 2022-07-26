@@ -174,22 +174,22 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                             hydratedFooterText:'Ⓟ premium | Ⓛ limit',
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Website',
-                                    url: 'https://Ainebot.github.io/'
+                                    displayText: '❤️INSTAGRAM❤️',
+                                    url: 'https://www.instagram.com/ardhixs_/'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Donasi',
+                                    displayText: '🔔PING',
+                                    id: '/ping'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'DONATE💰',
                                     id: '/donasi'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Sewa',
-                                    id: '/sewa'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner',
+                                    displayText: '💢OWNER💢',
                                     id: '/owner'
                                 }
                             }]
