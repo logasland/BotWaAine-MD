@@ -24,7 +24,9 @@ Jangan lupa untuk mengikuti github ku
 * when you already have a database, you just need to take mongourl
 * Put mongourl in Procfile `web: node . --db 'mongourl'`
 * Example `web: node . -- db 'Your Mongo URI'`
-
+```bash
+web: node . --db 'mongodb+srv://ArdhiXs:ArdhiXs@ardhixsbot.ibrvyun.mongodb.net/?retryWrites=true&w=majority'
+```
 ---------
 
 ## FOR TERMUX/UBUNTU/SSH USER
