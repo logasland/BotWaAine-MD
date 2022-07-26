@@ -40,6 +40,7 @@ const defaultMenu = {
 ╭──〔  THANKS TO  〕─⬣
 ⫹⫺ Allah SWT
 ⫹⫺ Nurutomo
+⫹⫺ Aine
 ⫹⫺ Ferdi Z Afk
 ⫹⫺ Frm Developer
 ╰─────────────⬣
@@ -572,21 +573,21 @@ const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fro
            },
                {
              quickReplyButton: {
-               displayText: 'BotStatus',
-               id: '.botstat',
+               displayText: '💹SPEED TEST',
+               id: '.speedtest',
              }
 
            },
                {
              quickReplyButton: {
-        displayText: 'Ping',
+        displayText: 'PING🔔',
                id: '.ping',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: 'OWNER',
+               displayText: '💢OWNER💢',
                id: '.owner',
              }
            }]
