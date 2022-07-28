@@ -35,19 +35,19 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 👋
-  
-*Waktu:* 
-%wib WIB
-%wita WITA
-%wit WIT
-*Hari:* %week
-*Tanggal:* %date
-*Uptime:* %uptime (%muptime)
+ʜᴀɪ, %ucapan %name! 👋
 
-*Limit:* %limit
-*Level:* %level
-*XP:* %exp
+*ᴡᴀᴋᴛᴜ:*
+%wib ᴡɪʙ
+%wita ᴡɪᴛᴀ
+%wit ᴡɪᴛ
+*ʜᴀʀɪ:* %week
+*ᴛᴀɴɢɢᴀʟ:* %date 
+*ᴜᴘᴛɪᴍᴇ:* %uptime (%muptime) 
+
+*ʟɪᴍɪᴛ:* %limit 
+*ʟᴇᴠᴇʟ:* %level 
+*xᴘ:* %exp
 %readmore`.trimStart(),
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
