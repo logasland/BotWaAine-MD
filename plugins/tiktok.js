@@ -14,7 +14,7 @@ handler.tags = ['downloader']
 
 handler.command = /^(tik(tok)?(dl)?)$/i
 
-module.exports = handler*/
+module.exports = handler
 
 
 const hxz = require("hxz-api")
@@ -31,9 +31,8 @@ handler.tags = ['downloader']
 handler.command = /^(tiktok|tiktokdl)$/i
 handler.limit = true
 handler.group = true
-module.exports = handler
+module.exports = handler*/
 
-/*
 const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `*Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
@@ -42,14 +41,15 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     const url = video.no_watermark || video.no_watermark_hd || video.with_watermark || video.no_watermark_raw
     if (!url) throw 'Can\'t download video!'
     m.reply('Sedang diproses...')
-    conn.sendFile(m.chat, url, 'tiktok.mp4', `*© Aine*
+    conn.sendFile(m.chat, url, 'tiktok.mp4', `*_@ardhixs__*
 `.trim(), m)
 }
 handler.help = ['tiktok <url>']
 handler.tags = ['downloader']
+handler.limit = true
 
-handler.command = /^(tik|tt|tiktok)$/i
+handler.command = /^(tiktokdl|tt|tiktok)$/i
 
 module.exports = handler
-*/
+
 
