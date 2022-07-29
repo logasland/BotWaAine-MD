@@ -1,4 +1,4 @@
-const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
+/*const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
     const { author: { nickname }, video, description } = await tiktokdl(args[0]).catch(async _ => await tiktokdlv2(args[0]))
@@ -17,7 +17,7 @@ handler.command = /^(tt|tik(tok)?(dl)?)$/i
 module.exports = handler
 
 
-/*const hxz = require("hxz-api")
+const hxz = require("hxz-api")
 let handler = async(m, { conn, args, usedPrefix, command }) => {
 if (!args[0]) throw `*Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
 if (!args[0].match(/tiktok/gi)) throw `*Link salah! Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
