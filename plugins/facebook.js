@@ -1,4 +1,20 @@
 let fetch = require('node-fetch')
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys')
+let handler = async (m, { conn, text }) => {
+    if (!text) throw 'Masukkan Link\n\nContoh: .fb https://facebook.com/xxxxxx'
+m.reply('*_Tunggu 10jam..._*')
+let res = await fetch('https://api.violetics.pw/api/downloader/facebook?apikey=91d3-8991-85d2&url=' + encodeURIComponent(text))
+let json= await res.json()
+conn.sendFile(m.chat, json.result.hd.url, 'ArdhiXsFile', '_@ardhixs__', m)
+}
+handler.help = ['fb <url>', 'fbdl <url>', 'facebook <url>']
+handler.tags = ['downloader']
+handler.command = /^fb|fbdl|facebook$/i
+handler.limit = true
+
+module.exports = handler
+
+/*let fetch = require('node-fetch')
 const {
     MessageType
 } = require('@adiwajshing/baileys')
@@ -29,7 +45,7 @@ handler.premium = false
 module.exports = handler
 
 
-/*let fetch = require('node-fetch')
+let fetch = require('node-fetch')
 const {
     MessageType
 } = require('@adiwajshing/baileys')
