@@ -9,6 +9,7 @@ handler.command = /^ss(web)?f?$/i
 
 handler.limit = true
 handler.fail = null
+
 module.exports = handler
 
 
