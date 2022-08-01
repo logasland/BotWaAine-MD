@@ -1,3 +1,17 @@
+let handler = async (m, { conn, prefix, text }) => {
+if (!text) return conn.reply(m.chat, `Contoh: ${prefix}ssweb ardhi.eu.org`, m)
+let link = 'https://axs-api.herokuapp.com/api/tools/ssweb?link=' + text
+conn.sendFile(m.chat, link, 'ArdhiXs.png', '_Nih tod_\n*_@IG:ardhixs__*', m)
+}
+handler.help = ['ssweb']
+handler.tags = ['internet']
+handler.command = /^ss(web)?f?$/i
+
+handler.limit = true
+handler.fail = null
+module.exports = handler
+
+
 /*const axios = require ("axios")
 const fetch = require('node-fetch')
 const { MessageType } = require('@adiwajshing/baileys')
@@ -46,7 +60,7 @@ const getBuffer = async (url, options) => {
 	} catch (e) {
 		console.log(`Error : ${e}`)
 	}
-}*/
+}
 
 
 
@@ -72,5 +86,4 @@ handler.botAdmin = false
 
 handler.fail = null
 
-module.exports = handler
-
+module.exports = handler*/
