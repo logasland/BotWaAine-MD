@@ -1,6 +1,5 @@
 const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `*Url nya mana cuy?*`
+let handler = async (m, { conn, args }) => {
   const { author: { nickname }, video, description } = await tiktokdl(args[0]).catch(async _ => await tiktokdlv2(args[0]))
     const url = video.no_watermark_raw || video.no_watermark || video.no_watermark_hd || video.with_watermark 
     if (!url) throw 'Can\'t download video!'
