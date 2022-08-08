@@ -1,3 +1,27 @@
+const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+    if (!args[0]) throw `*Url nya mana cuy?*`
+  const { author: { nickname }, video, description } = await tiktokdl(args[0]).catch(async _ => await tiktokdlv2(args[0]))
+    const url = video.no_watermark_raw || video.no_watermark || video.no_watermark_hd || video.with_watermark 
+    if (!url) throw 'Can\'t download video!'
+	taex = `🔗 *Url:* ${await shortlink(url)}
+🧏 *Nickname:* ${nickname}${description ? `🖹 *Description:* ${description}` : ''}
+`
+conn.sendMessage(m.chat, { video: { url: url },caption: taex }, { quoted: m })
+}
+handler.help = ['tiktok'].map(v => v + ' <url>')
+handler.tags = ['downloader']
+handler.command = /^(tt|ttdl|tiktok|tiktokdl)$/i
+handler.limit = true
+handler.group = true
+module.exports = handler
+
+async function shortlink(url) {
+isurl = /https?:\/\//.test(url)
+return isurl ? (await require('axios').get('https://tinyurl.com/api-create.php?url='+encodeURIComponent(url))).data : ''
+}
+
+
 /*const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
