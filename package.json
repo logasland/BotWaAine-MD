@@ -41,8 +41,8 @@
     "license": "GPL-3.0-or-later",
     "dependencies": {
         "@adiwajshing/baileys": "github:adiwajshing/baileys",
-        "@adiwajshing/keyed-db": "^0.2.4",
-        "@bochilteam/scraper": "0.0.81",
+        "@adiwajshing/keyed-db": "latest",
+        "@bochilteam/scraper": "latest",
         "acrcloud": "^1.4.0",
         "async": "^3.2.3",
         "awesome-phonenumber": "^2.73.0",
