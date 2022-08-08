@@ -5,8 +5,7 @@ let handler = function (m) {
     if (!isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
     conn.sendMessage(chat, { delete: m.quoted.vM.key })*/
     if (!m.quoted) throw false
-    let { chat, fromMe, id, isBaileys } = m.quoted
-    if (!isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
+    let { chat, fromMe, id } = m.quoted
     conn.sendMessage(m.chat, { delete: {
   remoteJid: m.chat,
   id: m.quoted.id,
