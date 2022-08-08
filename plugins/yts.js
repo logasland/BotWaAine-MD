@@ -23,7 +23,7 @@ handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
 handler.tags = ['tools']
 handler.command = /^yts(earch)?$/i
 
-module.exports = handler*/
+module.exports = handler
 
 
 let yts = require('yt-search')
@@ -52,5 +52,4 @@ handler.tags = ['tools']
 handler.command = /^yts(earch)?$/i
 handler.limit = true
 
-module.exports = handler
-
+module.exports = handler*/
