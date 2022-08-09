@@ -14,10 +14,10 @@ let handler = function (m) {
 }})
 
 }
-handler.help = ['del', 'delete']
+handler.help = ['del', 'dell']
 handler.tags = ['group']
 
-handler.command = /^tesss$/i
-handler.owner = true
+handler.command = /^del|dell$/i
+handler.premium = true
 
 module.exports = handler
