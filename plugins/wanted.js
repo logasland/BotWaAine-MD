@@ -14,7 +14,7 @@ let handler = async (m, { conn, text }) => {
   let url = await uploadImage(img)
   let wanted = `https://api.dhamzxploit.my.id/api/canvas/wanted?url=${url}`
   let stiker = await getBuffer(wanted)
-  if (stiker) return conn.sendMessage(from, { image: stiker}, {quoted: m})
+  if (stiker) return conn.sendMessage(m.chat, { image: stiker}, {quoted: m})
   
  } catch (e) {
    m.reply('Conversion Failed')
