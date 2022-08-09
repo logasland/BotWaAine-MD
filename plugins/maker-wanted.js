@@ -12,9 +12,9 @@ let handler = async (m, { conn, text }) => {
   if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
   let img = await q.download()
   let url = await uploadImage(img)
-  let wanted = `https://ardhixsquerpants.herokuapp.com/api/maker/wanted?picurl=${url}`
+  let wanted = `https://api-axs.herokuapp.com/api/maker/wanted?url=${url}`
   let stiker = await getBuffer(wanted)
-  if (stiker) return conn.sendMessage(m.chat, { image: stiker}, {quoted: m})
+  if (stiker) return conn.sendMessage(m.chat, '_@ardhixs__', { image: stiker}, {quoted: m})
   
  } catch (e) {
    m.reply('Conversion Failed')
