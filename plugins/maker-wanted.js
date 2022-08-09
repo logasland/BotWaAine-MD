@@ -12,7 +12,7 @@ let handler = async (m, { conn, text }) => {
   if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
   let img = await q.download()
   let url = await uploadImage(img)
-  let wanted = `https://api.dhamzxploit.my.id/api/canvas/wanted?url=${url}`
+  let wanted = `https://ardhixsquerpants.herokuapp.com/api/maker/wanted?picurl=${url}`
   let stiker = await getBuffer(wanted)
   if (stiker) return conn.sendMessage(m.chat, { image: stiker}, {quoted: m})
   
@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
   }
 }
 handler.help = ['wanted']
-handler.tags = ['sticker']
+handler.tags = ['maker']
 handler.command = /^wanted$/i
 handler.limit = true
 handler.fail = null
@@ -67,7 +67,7 @@ let handler = async (m, { conn, text }) => {
   }
 }
 handler.help = ['wanted']
-handler.tags = ['sticker']
+handler.tags = ['maker']
 handler.command = /^wanted$/i
 handler.limit = true
 handler.fail = null
