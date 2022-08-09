@@ -1,6 +1,7 @@
 const uploadImage = require('../lib/uploadImage') 
 const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
+const axios = require ("axios")
 const fetch = require("node-fetch")
 
 let handler = async (m, { conn, text }) => {
