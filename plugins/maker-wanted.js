@@ -14,7 +14,7 @@ let handler = async (m, { conn, text }) => {
   let url = await uploadImage(img)
   let wanted = `https://api-axs.herokuapp.com/api/maker/wanted?url=${url}`
   let stiker = await getBuffer(wanted)
-  if (stiker) return conn.sendMessage(m.chat, '_@ardhixs__', { image: stiker}, {quoted: m})
+  if (stiker) return conn.sendMessage(m.chat, { image: stiker}, {quoted: m})
   
  } catch (e) {
    m.reply('Conversion Failed')
